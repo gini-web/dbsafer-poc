@@ -1,26 +1,19 @@
-# DBSAFER POC 標準作業流程互動式資訊圖表
+# DBSAFER POC 標準作業流程
 
-本專案提供一份基於 HTML、Tailwind CSS 與 Chart.js 的互動式 POC 流程資訊圖表，支援靜態託管平台（如 GitHub Pages、Netlify）一鍵部署。
+此專案為互動式 POC 流程網頁，使用 Tailwind CSS + Chart.js，
+可部署於 GitHub Pages、Netlify、Vercel 等靜態託管平台。
 
-## 📂 專案結構
-```
-dbsafer-poc/
-├── index.html    # 主頁面
-├── style.css     # 自訂樣式
-├── script.js     # 行為邏輯
-└── README.md     # 使用說明
-```
+## 檔案說明
 
-## 🚀 部署步驟
+- `index.html`：主頁，引用 `style.css`、`script.js`。
+- `style.css`：自訂版面配置與流程樣式。
+- `script.js`：Chart.js 圖表邏輯。
+- `README.md`：使用與部署說明。
 
-### GitHub Pages
-1. 建立 Repository 並推送至 `main` 分支
-2. 設定 Pages 分支為 `main`、資料夾為 `/root`
-3. 等待 1-2 分鐘即可訪問 `https://<你的帳號>.github.io/dbsafer-poc/`
+## 部署步驟
 
-### Netlify / Vercel
-1. 使用 GitHub 帳號匯入專案
-2. 自動部署並獲取二級域名
-
-## 📝 自訂
-- 修改 `index.html` 內容、`style.css` 樣式、`script.js` 圖表資料
+1. **推送到 GitHub**  
+   ```bash
+   git add .
+   git commit -m "Update title to DBSAFER POC 標準作業流程"
+   git push origin main
