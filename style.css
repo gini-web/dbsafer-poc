@@ -1,25 +1,57 @@
 body {
-    font-family: 'Helvetica Neue', 'PingFang TC', 'Heiti TC',
-                 'Microsoft JhengHei', sans-serif;
+  font-family: 'Helvetica Neue', 'PingFang TC', 'Heiti TC', 'Microsoft JhengHei', sans-serif;
 }
 
-.flow-line::after {
-    content: '';
-    position: absolute;
-    bottom: -2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 2px;
-    height: 2rem;
-    background-color: #06D6A0;
+/* 文本強制換行 */
+.text-wrap {
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
-.flow-arrow::after {
-    content: '▼';
-    position: absolute;
-    bottom: -1.75rem;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #06D6A0;
-    font-size: 1.5rem;
+/* 垂直流程通用樣式 */
+.vertical-flow-step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.vertical-flow-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  bottom: -2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 2rem;
+  background-color: #06D6A0;
+  z-index: 0;
+}
+
+.vertical-flow-step:not(:last-child)::before {
+  content: '▼';
+  position: absolute;
+  bottom: -2.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #06D6A0;
+  font-size: 1.5rem;
+  z-index: 10;
+}
+
+/* 流程圓圈 */
+.flow-circle {
+  background-color: #118AB2;
+  color: white;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  flex-shrink: 0;
 }
