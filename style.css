@@ -1,0 +1,25 @@
+body {
+    font-family: 'Helvetica Neue', 'PingFang TC', 'Heiti TC',
+                 'Microsoft JhengHei', sans-serif;
+}
+
+.flow-line::after {
+    content: '';
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 2rem;
+    background-color: #06D6A0;
+}
+
+.flow-arrow::after {
+    content: '▼';
+    position: absolute;
+    bottom: -1.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #06D6A0;
+    font-size: 1.5rem;
+}
